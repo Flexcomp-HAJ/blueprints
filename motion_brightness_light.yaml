@@ -2,7 +2,8 @@ blueprint:
   name: Motion and brightness activated Light
   description: Turn on a light when motion is detected and it is dark enough (or night).
   domain: automation
-  source_url: https://github.com/OliverHi/blueprints/blob/main/motion_brightness_light.yaml
+  # Thank you to Oliver - small Mod for Homematic Motion Detector including Brightness Sensor
+  source_url: https://github.com/Flexcomp-HAJ/blueprints/blob/main/motion_brightness_light.yaml
   input:
     motion_entity:
       name: Motion Sensor
@@ -14,7 +15,7 @@ blueprint:
       name: Lux/Brightness Sensor
       selector:
         entity:
-          device_class: illuminance
+          device_class: brightness
     light_target:
       name: Light(s) to control
       selector:
@@ -24,12 +25,12 @@ blueprint:
     brightness_trigger:
       name: Maximum brightness
       description: Brightness trigger level. If it gets any brighter the lights will not be turned on.
-      default: 20
+      default: 45
       selector:
         number:
           min: 0
-          max: 1000
-          unit_of_measurement: lx
+          max: 300
+          unit_of_measurement: #
     no_motion_wait:
       name: Wait time
       description: Time to leave the light on after last motion is detected.
