@@ -25,12 +25,12 @@ blueprint:
     brightness_trigger:
       name: Maximum brightness
       description: Brightness trigger level. If it gets any brighter the lights will not be turned on.
-      default: 45
+      default: 20
       selector:
         number:
           min: 0
-          max: 300
-          unit_of_measurement: #
+          max: 1000
+          unit_of_measurement: lx
     no_motion_wait:
       name: Wait time
       description: Time to leave the light on after last motion is detected.
