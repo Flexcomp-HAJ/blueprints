@@ -15,7 +15,7 @@ blueprint:
       name: Lux/Brightness Sensor
       selector:
         entity:
-          device_class: brightness
+          device_class: illuminance
     light_target:
       name: Light(s) to control
       selector:
