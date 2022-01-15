@@ -11,9 +11,10 @@ blueprint:
           domain: binary_sensor
           device_class: motion
     brightness_entity:
-      name: Lux/Brightness Sensor
+      name: Brightness Sensor
       selector:
         entity:
+          domain: sensor
           device_class: brightness
     light_target:
       name: Light(s) to control
